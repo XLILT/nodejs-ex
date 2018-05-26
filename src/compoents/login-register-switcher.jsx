@@ -1,6 +1,7 @@
 import React from 'react';
 import { KunPengLoginForm } from './login';
 import { KunPengRegisterForm } from './register';
+import { KunPengFooter } from './footer';
 import './login-register-switcher.css';
 
 class KunPengLoginReisterSwithcer extends React.Component {
@@ -28,6 +29,7 @@ class KunPengLoginReisterSwithcer extends React.Component {
 			<div>
 				{ this.state.showLogin && <KunPengLoginForm switchBox={this.switchBox} /> }
 				{ this.state.showRegister && <KunPengRegisterForm switchBox={this.switchBox} /> }
+				<KunPengFooter />
 			</div>
 		);
 	}	
