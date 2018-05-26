@@ -6,6 +6,8 @@ var mongodb = require('mongodb').MongoClient;
 var db = null,
     dbDetails = new Object();
 
+console.log(db_cfg);
+
 var initDb = function() {
   if (db_cfg.mongoURL == null) return;
 
@@ -26,11 +28,9 @@ var initDb = function() {
   });
 };
 
-router.use('/', function(req, res, next) {
-	if (!db) {
-		initDb();
-	}
+initDb();
 
+router.use('/', function(req, res, next) {
 	console.log('db', db);
 
 	if (db) {
