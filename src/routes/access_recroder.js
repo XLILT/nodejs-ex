@@ -6,8 +6,6 @@ var mongodb = require('mongodb').MongoClient;
 var db = null,
     dbDetails = new Object();
 
-console.log(db_cfg);
-
 var initDb = function() {
   if (db_cfg.mongoURL == null) return;
 
@@ -31,8 +29,6 @@ var initDb = function() {
 initDb();
 
 router.use('/', function(req, res, next) {
-	console.log('db', db);
-
 	if (db) {
     	var col = db.collection('access_log');
     	// Create a document with request IP and current time of request
