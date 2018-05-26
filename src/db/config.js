@@ -21,7 +21,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
   }
 };
 
-module.export = {	
+module.export const cfg = {
 	mongoURL: mongoURL,
 	mongoURLLabel: mongoURLLabel,
 	mongoServiceName: mongoServiceName,
