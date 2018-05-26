@@ -19,10 +19,10 @@ var initDb = function() {
 
     db = conn;
     dbDetails.databaseName = db.databaseName;
-    dbDetails.url = mongoURLLabel;
+    dbDetails.url = db_cfg.mongoURLLabel;
     dbDetails.type = 'MongoDB';
 
-    console.log('Connected to MongoDB at: %s', mongoURL);
+    console.log('Connected to MongoDB at: %s', db_cfg.mongoURL);
   });
 };
 
