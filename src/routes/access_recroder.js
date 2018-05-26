@@ -31,6 +31,8 @@ router.use('/', function(req, res, next) {
 		initDb();
 	}
 
+	console.log('db', db);
+
 	if (db) {
     	var col = db.collection('access_log');
     	// Create a document with request IP and current time of request
