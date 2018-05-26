@@ -61,6 +61,10 @@ app.use('/', access_recorder);
 
 app.use('/', express.static('views'));
 
+app.get('/', function (req, res) {
+  res.render('index.html');
+});
+
 // app.get('/', function (req, res) {
 //   // try to initialize the db on every request if it's not already
 //   // initialized.
