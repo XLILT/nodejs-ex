@@ -1,10 +1,32 @@
-#root .login-form {
-  max-width: 300px;
+.login-box {
+  max-width: 350px;
   margin: 10% auto;
 }
-#root .login-form-forgot {
+
+.login-box .login-form-forgot {
   float: right;
 }
-#root .login-form-button {
+
+.login-box .login-form-button {
   width: 100%;
+}
+
+.login-title {	
+    color: #0084ff;
+    font-size: 44px;
+    text-align: center;
+    display: block;
+}
+
+.login-proverbs {
+	color: #0084ff;
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+.tips-register {
+  text-align: center;
+  display: block;
 }

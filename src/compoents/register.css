@@ -1,0 +1,28 @@
+.register-box {
+  max-width: 350px;
+  margin: 10% auto;
+}
+
+.register-box .register-form-button {
+  width: 100%;
+}
+
+.register-title {	
+  color: #0084ff;
+  font-size: 44px;
+  text-align: center;
+  display: block;
+}
+
+.register-proverbs {
+  color: #0084ff;
+  font-size: 22px;
+  text-align: center;
+  display: block;
+  margin: 0 0 10px 0;	
+}
+
+.tips-login {
+  text-align: center;
+  display: block;
+}
