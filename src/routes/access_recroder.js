@@ -29,7 +29,7 @@ var initDb = function() {
 initDb();
 
 router.use('/', function(req, res, next) {
-	if (db) {
+	if (db && req.headers['x-forwarded-for']) {
     	var col = db.collection('access_log');
     	// Create a document with request IP and current time of request
     	col.insert({ip: req.headers['x-forwarded-for'], url: req.originalUrl, refer: req.headers['referer'], date: Date.now()});
