@@ -21,6 +21,10 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
   }
 };
 
+if(process.argv.splice(2).indexOf('--devs') >= 0) {
+  mongoURL = "mongodb://192.168.0.89:27017/kp"
+}
+
 module.exports = {
 	mongoURL: mongoURL,
 	mongoURLLabel: mongoURLLabel,

@@ -1,5 +1,7 @@
+import axios from 'axios';
 import React from 'react';
-import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+//import { Redirect } from 'react-router-dom';
+import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete, notification } from 'antd';
 import './register.css';
 
 const FormItem = Form.Item;
@@ -20,7 +22,33 @@ class RegistrationForm extends React.Component {
 
     this.props.form.validateFieldsAndScroll((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        //console.log('Received values of form: ', values);
+
+        axios.post('/register', values).then((res) => {
+          if(res.data.error == 0) {
+            notification['success']({
+            message: '注册成功',
+              description: '恭喜你成功鲲鹏的一员，请前往登录.',
+            });
+
+            this.handleSwitchBox();
+          }
+          else {
+            notification['error']({
+            message: '注册失败',
+              description: res.data.error,
+            });
+
+          console.log(res);  
+          }
+        }).catch(err => {
+          notification['error']({
+            message: '注册失败',
+            description: '系统错误.',
+          });
+
+          console.log(err);
+        });
       }
     });
   }
@@ -123,7 +151,10 @@ class RegistrationForm extends React.Component {
         </FormItem>
         <FormItem {...tailFormItemLayout}>
           {getFieldDecorator('agreement', {
-            valuePropName: 'checked',
+            //valuePropName: 'checked',
+            rules: [{
+              required: true, message: '不同意协议将无法注册',
+            }]
           })(
             <Checkbox>我同意<a href="javascript:void(0);">鲲鹏协议</a></Checkbox>
           )}
