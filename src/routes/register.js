@@ -7,7 +7,7 @@ router.use('/', function(req, res, next) {
 	if(!req.body.email || !req.body.password) {
 		return res.sendStatus(400);
 	}
-	
+
 	if (get_conn) {
     get_conn().then(conn => {
     	var col = conn.db().collection('users');

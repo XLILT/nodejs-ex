@@ -34,7 +34,8 @@ module.exports = {
   ],
   output: {
     filename: '[name].[chunkhash:8].js',
-    path: path.resolve(__dirname, '../views')
+    path: path.resolve(__dirname, '../views'),
+    publicPath: '/'
   },
   module: {
     rules: [

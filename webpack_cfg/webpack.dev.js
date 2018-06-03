@@ -13,12 +13,12 @@ module.exports = merge(common, {
     hot: true,
     open: true,
     proxy:{
-    '/test_proxy': {
-        target: 'https://www.baidu.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/test_proxy': '/'
-        }
+    '/': {
+        target: '127.0.0.1:8088',
+        // changeOrigin: true,
+        // pathRewrite: {
+        //   '^/test_proxy': '/'
+        // }
     }
   }
   }
