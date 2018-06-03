@@ -152,16 +152,16 @@ app.use(function(err, req, res, next) {
 // const port = devServerOptions.port;
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
-    ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+    host   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
 
 // Serve the files on port.
 app.listen(port, host, () => {
 	const url = 'http://' + host + ':' + port;
-	const opn_url = 'http://localhost:' + port;
+	//const opn_url = 'http://localhost:' + port;
 
 	console.log('Starting server on ' + url);
 
-	Opn(opn_url).then(() => {
-		console.log('Already open ' + url);
-	})
+	// Opn(opn_url).then(() => {
+	// 	console.log('Already open ' + url);
+	// })
 });
