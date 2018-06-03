@@ -107,8 +107,6 @@ var jsonParser = bodyParser.json()
 // create application/x-www-form-urlencoded parser
 //var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
-console.log(db_cfg)
-
 let session_options = {
 	store: new MongoStore({
 		url: db_cfg.mongoURL
@@ -144,11 +142,11 @@ app.use(function(err, req, res, next) {
 	res.status(500).send('Something bad happened!');
 });
 
-const devServerOptions = Object.assign({}, webpackConfig.devServer, {
-	stats: {
-		colors: true
-	}
-});
+// const devServerOptions = Object.assign({}, webpackConfig.devServer, {
+// 	stats: {
+// 		colors: true
+// 	}
+// });
 
 // const host = devServerOptions.host;
 // const port = devServerOptions.port;
