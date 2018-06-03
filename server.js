@@ -107,6 +107,8 @@ var jsonParser = bodyParser.json()
 // create application/x-www-form-urlencoded parser
 //var urlencodedParser = bodyParser.urlencoded({ extended: true })
 
+console.log(db_cfg)
+
 let session_options = {
 	store: new MongoStore({
 		url: db_cfg.mongoURL
