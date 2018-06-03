@@ -1,0 +1,209 @@
+blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #f40;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 18px;
+}
+
+div {
+    display: block;
+}
+
+body {
+    font: 12px/1.5 "Microsoft YaHei",tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+
+.hide {
+    display: none !important;
+}
+
+.logo {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 22px;
+}
+
+.logo h1 {
+    display: block;
+    float: left;
+    zoom: 1;
+    width: 100px;
+    height: 44px;
+    vertical-align: middle;
+}
+
+.logo h1 a {
+    text-decoration: none;
+    display: block;
+}
+
+.iconfont {
+    font-family: iconfont!important;
+    /*font-size: 16px;*/
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    /*-moz-osx-font-smoothing: grayscale;*/
+}
+
+.logo h1 .iconfont {
+    display: block;
+    color: #f40;
+    font-weight: 400;
+}
+
+.logo h1 .logo-word {
+    position: relative;
+    font-size: 20px;
+    top: -5px;
+}
+
+.logo h1 .logo-url {
+    font-size: 20px;
+    position: relative;
+    top: -15px;
+}
+
+.logo .login-register {
+    float: right;
+    line-height: 44px;
+}
+
+.logo .login-register a {
+	color: #666;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 737;
+    background-image: url(../img/body_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 20%, 0%;
+}
+
+.content .login-box {
+    width: 300px;
+    height: 180px;
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    margin-top: 50px;
+    background-color: #dddddd;
+}
+
+.content .register-box {
+    width: 300px;
+    height: 180px;
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    margin-top: 50px;
+    background-color: #dddddd;
+}
+
+.login-box form {
+    margin: 0 50;
+}
+
+.login-box .login-p {
+    position: relative;
+    padding-top: 20px;
+}
+
+.login-box .login-tip {
+    position: absolute;
+    width: 335px;
+    height: 17px;
+    font-size: 12px;
+    line-height: 16px;
+    z-index: 398;
+    padding-left: 15px;
+}
+
+.login-box .login-sbt {
+    text-align: center;
+    margin: 20px 0 30px;
+    /* margin-left: -30px; */
+}
+
+.login-box .login-box-sbt {
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: "微软雅黑", Arial;
+    text-align: center;
+    border: none;
+    background: #f40;
+    border-radius: 2px;
+    margin: 35px auto 0;
+}
+.register-box form {
+    margin: 0 50;
+}
+
+.register-box .register-p {
+    position: relative;
+    padding-top: 20px;
+}
+
+.register-box .register-tip {
+    position: absolute;
+    width: 335px;
+    height: 17px;
+    font-size: 12px;
+    line-height: 16px;
+    z-index: 398;
+    padding-left: 15px;
+}
+
+.register-box .register-sbt {
+    text-align: center;
+    margin: 20px 0 30px;
+    /* margin-left: -30px; */
+}
+
+.register-box .register-box-sbt {
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-family: "微软雅黑", Arial;
+    text-align: center;
+    border: none;
+    background: #f40;
+    border-radius: 2px;
+    margin: 35px auto 0;
+}
+
+.register-box .register-result {
+	width: 100%;
+	height: 30px;
+	margin: 50px auto;
+}
+
+.register-box .register-result span {
+	width: 100%;
+	text-align: center;
+	display: block;
+}
+

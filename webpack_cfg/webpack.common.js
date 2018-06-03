@@ -9,18 +9,28 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 module.exports = {
   context: path.resolve(__dirname, "../"),
   entry: {
-    app: './src/index.js'    
+    home: './src/home.js',
+    app: './src/index.js'
+  },
+  output: {
+    filename: '[name].[chunkhash:8].js',
+    path: path.resolve(__dirname, '../views'),
+    publicPath: '/'
   },
   plugins: [
     new CleanWebpackPlugin(['views'], {
       root: path.resolve(__dirname, "../"),
       verbose: true
-    }),
+    }),    
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html',
-      chunks : ['manifest', 'commons', 'app'],
-      date : new Date()
+      chunks : ['manifest', 'commons', 'app']
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'home.ejs',
+      template: '!!html-loader!./src/home.ejs',      
+      chunks : ['manifest', 'commons', 'home']
     }),
     new webpack.HashedModuleIdsPlugin(),
     new CopyWebpackPlugin([{
@@ -32,11 +42,6 @@ module.exports = {
         debug:"debug"
     })
   ],
-  output: {
-    filename: '[name].[chunkhash:8].js',
-    path: path.resolve(__dirname, '../views'),
-    publicPath: '/'
-  },
   module: {
     rules: [
       {

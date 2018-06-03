@@ -13,6 +13,7 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "express-session": "^1.15.6",
+    "jquery": "^3.3.1",
     "mocha": "^2.4.5",
     "mongodb": "3.0.8",
     "morgan": "^1.7.0",
@@ -42,6 +43,7 @@
     "url": "http://github.com/openshift/nodejs-ex/issues"
   },
   "homepage": "http://github.com/openshift/nodejs-ex",
-  "devDependencies": {    
+  "devDependencies": {
+    
   }
 }

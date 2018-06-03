@@ -74,14 +74,14 @@ passport.use(new LocalStrategy({
     passwordField: 'password_login'
   },
   function(username, password, done) {
-  	console.log("strategy: ", username, password);
+  	//console.log("strategy: ", username, password);
 
   	return done(null, {'email': username});
   }
 ));
 
 passport.serializeUser(function(user, done) {
-	console.log('serializeUser', user);
+	//console.log('serializeUser', user);
 
 	done(null, user.email);
 });
@@ -135,6 +135,14 @@ app.get('/', function(req, res) {
 app.post('/register', jsonParser, register);
 app.post('/login', jsonParser, login);
 app.get('/home', home);
+
+// app.get('/home', function(req, res) {
+// 	//console.log(req)
+
+// 	res.render('home.ejs', {
+// 		user: "2"
+// 	});
+// });
 
 // error handling
 app.use(function(err, req, res, next) {

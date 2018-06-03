@@ -6,15 +6,11 @@ var router = express.Router();
 
 router.use('/',
 	connectEnsureLogin.ensureLoggedIn('/'),
-	function(req, res, next) {
-	if (req.session.views) {
-		req.session.views++;
+	function(req, res) {
+		res.render('home.ejs', {
+			user: req.session.username
+		});
 	}
-	else {
-		req.session.views = 1;
-	}
-
-	res.send("您好，" + req.session.username + "。敬请期待!");
-});
+);
 
 module.exports = router;
