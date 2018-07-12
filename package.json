@@ -19,7 +19,8 @@
     "morgan": "^1.7.0",
     "object-assign": "4.1.0",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "webpack": "^4.7.0"
   },
   "engine": {
     "node": "*",
@@ -27,7 +28,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "obuild": "node build.js",
+    "build": "node build.js",
     "dev": "nodemon development.js --devs",
     "devs": "nodemon server.js --devs",
     "builds": "node build.js && nodemon server.js --devs",
