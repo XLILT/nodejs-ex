@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "node build.js",
+    "obuild": "node build.js",
     "dev": "nodemon development.js --devs",
     "devs": "nodemon server.js --devs",
     "builds": "node build.js && nodemon server.js --devs",
